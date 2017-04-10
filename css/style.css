@@ -1,0 +1,266 @@
+.message {
+    -webkit-transition: 0.5s ease-out;
+    -moz-transition: 0.5s ease-out;
+    -ms-transition: 0.5s ease-out;
+    transition: 0.5s ease-out;
+    overflow: hidden;
+}
+.container{
+  margin: 0 auto;
+}
+/*----------------------------------------------------
+nav
+----------------------------------------------------*/
+#top > nav{
+  position: fixed;
+  width: 100%;
+}
+.densetsu {
+  position: relative;
+  height: 52px;
+}
+
+.densetsu > a{
+  display: block;
+  width: 95%;
+  height: 95%;
+  text-decoration: none;
+}
+
+.densetsu > a > img{
+  border: 0px;
+  display: block;
+  width: auto;
+  height: 90%;
+  margin: auto 0;
+  padding-top: 7px;
+}
+
+
+@media screen and (max-width: 979px) {
+  .densetsu {
+    position: relative;
+    height: calc(52px * 0.75);
+    margin: calc(52px * 0.125) 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .densetsu {
+    padding-left: 30px;
+  }
+}
+.fa-github {
+  color: #201f1f;
+}
+.fa-twitter {
+  color: #55acee;
+}
+
+.fa-facebook {
+  color: #3B5998;
+}
+
+/*----------------------------------------------------
+header
+----------------------------------------------------*/
+.header{
+  width: 100%;
+  height: 600px;
+  position: relative;
+}
+.header-text{
+  width: 100%;
+  height: auto;
+  text-align: center;
+  position: absolute;
+  color: #ffffff;
+  margin: calc(calc(600px - 160px) / 2) 0;
+}
+.word {
+  font-family: 'Noto Sans Japanese', sans-serif;
+  font-weight: bold;
+  font-size: 120px;
+  line-height: 100%;
+}
+.ict-word {
+  font-family: 'Raleway', sans-serif;
+  font-size: 130px;
+}
+
+#canvas-image {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  /*background-image: url("../img/header.jpg.old");*/
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+
+@media screen and (max-width: 768px) {
+  .header{
+    height: 300px;
+  }
+  .word{
+    font-size: 60px;
+  }
+  .ict-word {
+    font-size: 65px;
+  }
+  .word2{
+    font-size: 20px;
+  }
+  .header-text{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    position: absolute;
+    color: #ffffff;
+    margin: calc(calc(300px - 80px) / 2) 0;
+  }
+}
+@media screen and (max-width: 450px) {
+  .ict-word {
+    text-align: center;
+    display: block;
+  }
+  .header-text{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    position: absolute;
+    color: #ffffff;
+    margin: calc(calc(300px - 140px) / 2) 0;
+  }
+}
+
+/*----------------------------------------------------
+main
+----------------------------------------------------*/
+#content{
+  top: 52px;
+  position: relative;
+}
+.main > *{
+  width: 100%;
+  padding: 0 13%;
+  background-color: #ffffff;
+}
+.main h3 {
+  font-size: 30px;
+  font-weight: 600;
+/*color: #434343;*/
+  color: #1ca54c;
+  text-align: center;
+}
+.main h3:after {
+  display: block;
+  content: '';
+  width: auto;
+  height: 4px;
+  border-radius: 10px;
+  border: 2px solid #eaedf0;
+  margin: 10px auto;
+}
+.main section {
+  padding-bottom: 100px;
+}
+.main section p {
+  font-size: 17px;
+  font-weight: 400;
+  color: #434343;
+  line-height: 1.7;
+}
+.ict-content {
+  padding-bottom: 100px;
+}
+.main > section:nth-child(2n+1){
+  background: #ffffff;
+}
+.main > section:nth-child(2n+2){
+  background: #f6f9fc;
+}
+.content-child-img{
+  width: 50%;
+  padding: 0px;
+}
+.content-child-img > img{
+  width: calc(100% - 45px);
+  float: none !important;
+  display: block;
+  height: auto;
+}
+
+.main p {
+  clear: both;
+}
+
+.main img {
+  margin: 15px auto;
+}
+
+.contents-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+.contents-wrap:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+
+@media screen and (max-width: 768px) {
+  .main > *{
+    padding: 0 9%;
+  }
+
+  .content-child-img{
+    width: 100%;
+  }
+  .contents-wrap, .contents-wrap:nth-child(odd)  {
+    flex-direction: column;
+  }
+}
+/*----------------------------------------------------
+リンク
+----------------------------------------------------*/
+#link {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  margin-bottom: 0;
+}
+#link div.columns > div.column{
+  position: relative;
+  padding: 40px 30px calc(2.25em + 0.5em * 2 + 1px * 2 + 30px) 40px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin: 10px;
+}
+#link div.columns > div.column > h3 {
+  padding: 0px;
+}
+
+.button-links{
+  width: 70%;
+  margin: 0 auto;
+  display: block;
+  position: absolute;
+  bottom: 30px;
+  left: 15%;
+}
+
+/*----------------------------------------------------
+footer
+----------------------------------------------------*/
+.footer {
+  border-top: 2px solid rgba(207,215,223,.25);
+  margin: auto;
+  max-height: 200px;
+}
+#footer-color {
+  background-color: #f6f9fc;
+}
